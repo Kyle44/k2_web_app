@@ -1,7 +1,29 @@
-$primary: red;
+$primary: blue;
+$secondary: rgb(181, 6, 197);
+
+// Extention
+%common-h1{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-style: italic;
+}
+
+// Standard font size
+%font_std{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-style: italic;
+}
+
+// Function, use looks like :
+// .logo{ @include rotate(30deg) }
+@mixin rotate($value){
+	-webkit-transform: $value;
+	-ms-transform: $value;
+	transform: $value;
+}
 
 
 h1{
+	@extend %font_std;
 	color: $primary;
 }
 
@@ -15,71 +37,24 @@ p{
 
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-  }
-  
-  ol, ul {
-    padding-left: 30px;
-  }
-  
-  .board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  
-  .status {
-    margin-bottom: 10px;
-  }
-  
-  .square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-  }
-  
-  .square:focus {
-    outline: none;
-  }
-  
-  .kbd-navigation .square:focus {
-    background: #ddd;
-  }
-  
-  .game {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .game-info {
-    margin-left: 20px;
-  }
-  
-
-.navbar {
-    width: 100%;
-    float: left;
-    margin: 0 0 3em 0;
-    padding: 0;
-    list-style: none;
-    background-color: #f2f2f2;
-    border-bottom: 1px solid #ccc; 
-    border-top: 1px solid #ccc;
-    position: absolute;
-    bottom: 0vw;
+	margin: 20px;
+	background-color: $secondary;
 }
 
-.navbar div{
-    display: inline-block;
-    margin: 1vw;
-    font-size: 2vw;
+.navbar {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc;
+	position: absolute;
+	bottom: 0vw;
+	div{
+		display: inline-block;
+		margin: 1vw;
+		font-size: 2vw;
+	}
 }

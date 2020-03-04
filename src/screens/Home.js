@@ -15,9 +15,10 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <button className="square">
-                {/* TODO */}
-            </button>
+            <div>
+				<h1>K<sup>2</sup></h1>
+				<h2>Home Screen</h2>
+			</div>
         );
     }
   }

@@ -17,7 +17,7 @@ export default class App extends React.Component {
         this.state = {
             value: null,
         };
-    }
+    } // end constructor
 
 
     render() {
@@ -37,13 +37,7 @@ export default class App extends React.Component {
 
                 </div>
             </HashRouter>
-            
-                    // <li><a href="#">Home</a></li>
-                    
-                    // <li><a href="#">About</a></li>
-                    // <li><a href="/cart">Cart</a></li>
-                    // <li><a href="#">Contact</a></li>
 
-        );
-    }
-}
+        ); // end return
+    } // end render
+} // end App component
