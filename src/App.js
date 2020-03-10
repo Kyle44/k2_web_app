@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 import Home from './screens/Home';
 import Cart from './screens/Cart';
+import About from './screens/About';
+import Contact from './screens/Contact';
 import './index.css';
 
 
@@ -27,6 +29,8 @@ export default class App extends React.Component {
                     <div className="content">
                         <Route exact path="/" render={(props) => <Home />} />
                         <Route path="/cart" render={(props) => <Cart />} />
+						<Route path="/about" render={(props) => <About />} />
+						<Route path="/contact" render={(props) => <Contact />} />
                     </div>
                     <div className="navbar">
                         <div><NavLink exact to="/">Home</NavLink></div>

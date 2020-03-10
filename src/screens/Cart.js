@@ -16,10 +16,7 @@ export default class Cart extends React.Component {
     render() {
         return (
             <div>
-                <p>Cart</p>
-				<button className="square">
-                    {/* TODO */}
-                </button>              
+				<h1 className="title">Cart</h1>          
             </div>
 			    
         );

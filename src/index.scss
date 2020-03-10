@@ -1,5 +1,6 @@
 $primary: blue;
 $secondary: rgb(181, 6, 197);
+$tertiary: white;
 
 // Extention
 %common-h1{
@@ -13,6 +14,15 @@ $secondary: rgb(181, 6, 197);
 	font-style: italic;
 }
 
+%center_text{
+	//border: 3px black solid;
+	text-align: center;
+}
+
+%border{
+	border: 3px solid black;
+}
+
 // Function, use looks like :
 // .logo{ @include rotate(30deg) }
 @mixin rotate($value){
@@ -21,35 +31,43 @@ $secondary: rgb(181, 6, 197);
 	transform: $value;
 }
 
+*{
+	@extend %font_std;
+}
 
 h1{
-	@extend %font_std;
 	color: $primary;
+}
+
+h2{
+
 }
 
 
 p{
-	color: $primary;
+	color: $tertiary;
+}
+
+.title{
+	@extend %center_text;
 }
 
 
-
-
 body {
+	@extend %font_std;
     font: 14px "Century Gothic", Futura, sans-serif;
 	margin: 20px;
 	background-color: $secondary;
 }
 
 .navbar {
-	width: 100%;
+	@extend %border;
+	width: 95%;
 	float: left;
 	margin: 0 0 3em 0;
 	padding: 0;
 	list-style: none;
 	background-color: #f2f2f2;
-	border-bottom: 1px solid #ccc; 
-	border-top: 1px solid #ccc;
 	position: absolute;
 	bottom: 0vw;
 	div{
