@@ -3,6 +3,11 @@ body, * {
   font-style: italic;
 }
 
+.navbar {
+  position: sticky;
+  top: 0vw;
+}
+
 .title {
   text-align: center;
 }
@@ -11,8 +16,16 @@ body, * {
   border: 3px solid black;
 }
 
+.navbar div :hover {
+  color: red;
+}
+
 h1 {
-  color: blue;
+  color: #7334e0;
+}
+
+h2 {
+  color: white;
 }
 
 p {
@@ -22,18 +35,17 @@ p {
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
-  background-color: #b506c5;
+  background-color: #638ff7;
 }
 
 .navbar {
-  width: 95%;
+  width: 100%;
   float: left;
   margin: 0 0 3em 0;
   padding: 0;
   list-style: none;
   background-color: #f2f2f2;
-  position: absolute;
-  bottom: 0vw;
+  top: 0vw;
 }
 .navbar div {
   display: inline-block;

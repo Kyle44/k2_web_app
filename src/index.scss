@@ -1,17 +1,19 @@
-$primary: blue;
-$secondary: rgb(181, 6, 197);
+$primary: rgb(115, 52, 224);
+$secondary: rgb(99, 143, 247);
 $tertiary: white;
+$hoverColor: red;
 
-// Extention
-%common-h1{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-style: italic;
-}
+
 
 // Standard font size
 %font_std{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: italic;
+}
+
+%sticky{
+	position: sticky;
+	top: 0vw;
 }
 
 %center_text{
@@ -33,6 +35,10 @@ $tertiary: white;
 
 *{
 	@extend %font_std;
+}
+
+%hover_std{
+	color: $hoverColor;
 }
 
 h1{
@@ -62,17 +68,21 @@ body {
 
 .navbar {
 	@extend %border;
-	width: 95%;
+	@extend %sticky;
+	width: 100%;
 	float: left;
 	margin: 0 0 3em 0;
 	padding: 0;
 	list-style: none;
 	background-color: #f2f2f2;
-	position: absolute;
-	bottom: 0vw;
+	// position: absolute;
+	top: 0vw;
 	div{
 		display: inline-block;
 		margin: 1vw;
 		font-size: 2vw;
+		:hover{
+			@extend %hover_std;
+		}
 	}
 }

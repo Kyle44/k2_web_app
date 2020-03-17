@@ -15,10 +15,14 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <div>
-				<h1 className="title">K<sup>2</sup></h1>
-				<h2 className="title">Home Screen</h2>
+			<div className='container'>
+				<div>
+					<h1 className="title">K<sup>2</sup></h1>
+					<h2 className="title">Home Screen</h2>
+				</div>
 			</div>
+
+            
         );
     }
   }

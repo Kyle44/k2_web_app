@@ -10,6 +10,7 @@ import Cart from './screens/Cart';
 import About from './screens/About';
 import Contact from './screens/Contact';
 import './index.css';
+import { FaShoppingCart} from 'react-icons/fa';
 
 
 export default class App extends React.Component {
@@ -25,23 +26,23 @@ export default class App extends React.Component {
     render() {
         return(
             <HashRouter>
-                <div>
-                    <div className="content">
-                        <Route exact path="/" render={(props) => <Home />} />
-                        <Route path="/cart" render={(props) => <Cart />} />
-						<Route path="/about" render={(props) => <About />} />
-						<Route path="/contact" render={(props) => <Contact />} />
-                    </div>
-                    <div className="navbar">
-                        <div><NavLink exact to="/">Home</NavLink></div>
-                        <div><NavLink to="/cart">Cart</NavLink></div>
+                <div className='container'>
+					<div className="navbar sticky">
+						<div><NavLink exact to="/">Home</NavLink></div>
 						<div><NavLink exact to="/about">About</NavLink></div>
 						<div><NavLink to="/contact">Contact</NavLink></div>
-                    </div>
+						<div><NavLink to="/cart">CART <FaShoppingCart/></NavLink></div>
+					</div>
+					<div className="content">
+                        <Route exact path="/" render={(props) => <Home />} />
+						<Route path="/about" render={(props) => <About />} />
+						<Route path="/contact" render={(props) => <Contact />} />
+						<Route path="/cart" render={(props) => <Cart />} />
+					</div>
+                    
 
                 </div>
             </HashRouter>
-
         ); // end return
     } // end render
 } // end App component
