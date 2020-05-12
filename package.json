@@ -22,6 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "testAll": "react-scripts --coverage a",
+    "testUpdate": "react-scripts --coverage u",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -40,5 +42,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4"
+  },
+  "jest": {
+	"snapshotSerializers": ["enzyme-to-json/serializer"],
+	"collectCoverageFrom": ["src/**/*.js", "!src/index.js"],
+	"coverageReporters": ["text"]
   }
 }
